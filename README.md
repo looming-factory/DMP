@@ -1,4 +1,4 @@
-# DMP: Dynamic Movement Primitives
+# DMP
 This master thesis’s main objective is to develop an application that makes it easier for
 a user without prior robotic experience to control a robot. By focusing on intuitive, sim-
 plicity and safety for the end-user, the hope is to shorten small companies’ path to invest
