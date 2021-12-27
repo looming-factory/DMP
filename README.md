@@ -15,7 +15,7 @@ is calculated. The developed application performs connection to the robot, recor
 and storing demonstrations, computing, and storing Dynamical Movement Primitives in
 a library while also generating and executing safe trajectories on the robot.
 
-The project package dependencies is found at:
+The project package dependencies are found at:
 
 https://github.com/UniversalRobots/Universal_Robots_ROS_Driver
 
