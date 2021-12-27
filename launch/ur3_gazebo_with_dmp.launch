@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find ur_gazebo)/launch/ur3.launch" />
+
+    <include file="$(find ur3_moveit_config)/launch/ur3_moveit_planning_execution.launch">
+      <arg name="sim" value="true" />
+    </include> 
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="2" />
+    <arg name="pkg" value="dmp" />
+    <arg name="file" value="dmp.launch" />
+  </include>
+
+  <!-- <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="4" />
+    <arg name="pkg" value="ur3_moveit_config" />
+    <arg name="file" value="ur3_moveit_planning_execution.launch" />
+  </include> -->
+
+    
+</launch>

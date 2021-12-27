@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- <arg name="robot_ip" default="192.168.1.128"/>
+  <arg name="kinematics_config" default="${HOME}/my_robot_calibration.yaml"/>
+
+
+  <include file="$(find ur_robot_driver)/launch/ur3_bringup.launch" >
+      <arg name="robot_ip" value="$(arg robot_ip)"/>
+      <arg name="kinematics_config" value="$(arg kinematics_config)"/>
+  </include> -->
+
+  <include file="$(find ur_robot_driver)/launch/ur3_bringup.launch" >
+      <arg name="robot_ip" value="192.168.1.128"/>
+      <arg name="kinematics_config" value="/home/roy/my_robot_calibration.yaml"/>
+  </include>
+
+  <include file="$(find ur3_moveit_config)/launch/ur3_moveit_planning_execution.launch">
+      <arg name="sim" value="false" />
+    </include> 
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="2" />
+    <arg name="pkg" value="dmp" />
+    <arg name="file" value="dmp.launch" />
+  </include>
+
+</launch>
